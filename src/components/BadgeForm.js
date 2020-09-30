@@ -1,13 +1,26 @@
-import React from 'react';
+import React from "react";
 
 class BadgeForm extends React.Component {
-  handleClick = e => {
-    console.log('Button was clicked');
+  //   state = {};
+
+  //   handleChange = (e) => {
+  //     console.log({
+  //         name: e.target.name,
+  //         value: e.target.value
+  //     });
+
+  //     this.setState({
+  //       [e.target.name]: e.target.value,
+  //     });
+  //   };
+
+  handleClick = (e) => {
+    console.log("Btn clicked");
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form was submitted');
+    console.log("Btn submitted");
     console.log(this.state);
   };
 
@@ -20,10 +33,10 @@ class BadgeForm extends React.Component {
           <div className="form-group">
             <label>First Name</label>
             <input
-              onChange={this.props.onChange}
               className="form-control"
               type="text"
               name="firstName"
+              onChange={this.props.onChange}
               value={this.props.formValues.firstName}
             />
           </div>
@@ -31,10 +44,10 @@ class BadgeForm extends React.Component {
           <div className="form-group">
             <label>Last Name</label>
             <input
-              onChange={this.props.onChange}
               className="form-control"
               type="text"
               name="lastName"
+              onChange={this.props.onChange}
               value={this.props.formValues.lastName}
             />
           </div>
@@ -42,10 +55,10 @@ class BadgeForm extends React.Component {
           <div className="form-group">
             <label>Email</label>
             <input
-              onChange={this.props.onChange}
               className="form-control"
               type="email"
               name="email"
+              onChange={this.props.onChange}
               value={this.props.formValues.email}
             />
           </div>
@@ -53,10 +66,10 @@ class BadgeForm extends React.Component {
           <div className="form-group">
             <label>Job Title</label>
             <input
-              onChange={this.props.onChange}
               className="form-control"
               type="text"
               name="jobTitle"
+              onChange={this.props.onChange}
               value={this.props.formValues.jobTitle}
             />
           </div>
@@ -64,15 +77,15 @@ class BadgeForm extends React.Component {
           <div className="form-group">
             <label>Twitter</label>
             <input
-              onChange={this.props.onChange}
               className="form-control"
               type="text"
               name="twitter"
+              onChange={this.props.onChange}
               value={this.props.formValues.twitter}
             />
           </div>
 
-          <button onClick={this.handleClick} className="btn btn-primary">
+          <button className="btn btn-primary" onClick={this.handleClick}>
             Save
           </button>
         </form>
