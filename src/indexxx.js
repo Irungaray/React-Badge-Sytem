@@ -5,9 +5,8 @@
 
 // container.appendChild(element);
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import React from "react";
+import ReactDOM from "react-dom";
 
 // const probarScope = () => {
 //     const coso = 'capo';
@@ -21,16 +20,18 @@ import ReactDOM from 'react-dom';
 
 //     const variables = React.createElement('h1', {}, `Hola, soy un ${coso}`);
 
-     const container = document.getElementById('app');
+const container = document.getElementById("app");
 
 //     ReactDOM.render([jsx, element, variables], container);
 // }
 
 // probarScope()
 
-const jsx = <div>
+const jsx = (
+  <div>
     <h1>Hola, soy un capo</h1>
     <p>Soy un terrible capo</p>
-</div>
+  </div>
+);
 
 ReactDOM.render(jsx, container);
