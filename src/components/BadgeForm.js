@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class BadgeForm extends React.Component {
   //   state = {};
@@ -26,7 +27,7 @@ class BadgeForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <h1>New Attendant</h1>
 
         <form onSubmit={this.handleSubmit}>
@@ -88,8 +89,12 @@ class BadgeForm extends React.Component {
           <button className="btn btn-primary" onClick={this.handleClick}>
             Save
           </button>
+
+          <Link to="/badges" className="btn btn-primary">
+              Go Back
+          </Link>
         </form>
-      </div>
+      </>
     );
   }
 }
