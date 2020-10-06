@@ -1,44 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Gravatar from "./Gravatar";
+import './styles/BadgesList.css';
+import Gravatar from './Gravatar';
 
-import "../components/styles/BadgesList.css";
+class BadgesListItem extends React.Component {
+  render() {
+    return (
+      <div className="BadgesListItem">
+        <Gravatar
+          className="BadgesListItem__avatar"
+          email={this.props.badge.email}
+        />
 
-import tw_logo from "../images/twitter-logo.png";
+        <div>
+          <strong>
+            {this.props.badge.firstName} {this.props.badge.lastName}
+          </strong>
+          <br />@{this.props.badge.twitter}
+          <br />
+          {this.props.badge.jobTitle}
+        </div>
+      </div>
+    );
+  }
+}
 
 class BadgesList extends React.Component {
   render() {
-    if (this.props.badges.lenght === 0) {
+    if (this.props.badges.length === 0) {
       return (
         <div>
           <h3>No badges were found</h3>
           <Link className="btn btn-primary" to="/badges/new">
-            Create new Badge
+            Create new badge
           </Link>
         </div>
       );
     }
+
     return (
       <div className="BadgesList">
         <ul className="list-unstyled">
-          {this.props.badges.map((badges) => {
+          {this.props.badges.map(badge => {
             return (
-              <li key={badges.id} className="Badge__section-name-list">
-                <Gravatar
-                  className="Badge__avatar"
-                  email={badges.email}
-                  alt="Avatar"
-                />
-
-                <div>
-                  {badges.firstName} {badges.lastName}
-                  <br />
-                  {badges.title}
-                  <br />
-                  <img src={tw_logo} className="tw__logo" alt="Logo" />
-                  <span className="twitter__blue_font">{badges.twitter}</span>
-                </div>
+              <li key={badge.id}>
+                <Link
+                  className="text-reset text-decoration-none"
+                  to={`/badges/${badge.id}/edit`}
+                >
+                  <BadgesListItem badge={badge} />
+                </Link>
               </li>
             );
           })}
