@@ -23,22 +23,20 @@ class BadgeEdit extends React.Component {
   };
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
   }
 
   fetchData = async (e) => {
-    this.setState({ loading: true, error: null})
+    this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.badges.read(
-        this.props.match.params.badgeId
-      )
+      const data = await api.badges.read(this.props.match.params.badgeId);
 
-      this.setState({ loading: false, form: data })
+      this.setState({ loading: false, form: data });
     } catch (error) {
-      this.setState({ loading: false, error: error })
+      this.setState({ loading: false, error: error });
     }
-  }
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -54,12 +52,10 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.update(
-        this.props.match.params.badgeId, this.state.form
-      );
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/badges')
+      this.props.history.push("/badges");
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -67,7 +63,7 @@ class BadgeEdit extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <PageLoading />
+      return <PageLoading />;
     }
     return (
       <>
@@ -93,8 +89,7 @@ class BadgeEdit extends React.Component {
             </div>
 
             <div className="col-6">
-
-            <h1>Edit Attendant</h1>
+              <h1>Edit Attendant</h1>
 
               <BadgeForm
                 onChange={this.handleChange}

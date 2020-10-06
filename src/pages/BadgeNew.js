@@ -39,7 +39,7 @@ class BadgeNew extends React.Component {
       await api.badges.create(this.state.form);
       this.setState({ loading: true });
 
-      this.props.history.push('/badges')
+      this.props.history.push("/badges");
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -47,7 +47,7 @@ class BadgeNew extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <PageLoading />
+      return <PageLoading />;
     }
     return (
       <>
@@ -73,8 +73,7 @@ class BadgeNew extends React.Component {
             </div>
 
             <div className="col-6">
-
-            <h1>New Attendant</h1>
+              <h1>New Attendant</h1>
 
               <BadgeForm
                 onChange={this.handleChange}

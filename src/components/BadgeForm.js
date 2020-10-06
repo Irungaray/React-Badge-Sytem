@@ -88,7 +88,7 @@ class BadgeForm extends React.Component {
             Save
           </button>
 
-          <Link to="/badges" className="btn btn-primary">
+          <Link to="/badges" className="btn btn-primary ml-4">
             Go Back
           </Link>
 
