@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles/BadgeNew.css";
+import "./styles/BadgeEdit.css";
 
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
@@ -9,7 +9,7 @@ import api from "../api";
 
 import header from "../images/platziconf-logo.svg";
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
   state = {
     loading: false,
     error: null,
@@ -51,9 +51,9 @@ class BadgeNew extends React.Component {
     }
     return (
       <>
-        <div className="BadgeNew__hero">
+        <div className="BadgeEdit__hero">
           <img
-            className="BadgeNew__hero--image img-fluid"
+            className="BadgeEdit__hero--image img-fluid"
             src={header}
             alt="Logo"
           />
@@ -87,4 +87,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;

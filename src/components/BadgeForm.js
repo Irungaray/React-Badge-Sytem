@@ -93,6 +93,10 @@ class BadgeForm extends React.Component {
           <Link to="/badges" className="btn btn-primary">
             Go Back
           </Link>
+
+          {this.props.error && (
+            <p className="text-danger">{this.props.error.message}</p>
+          )}
         </form>
       </>
     );
