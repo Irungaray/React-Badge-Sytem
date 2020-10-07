@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom'
 import { Link } from "react-router-dom";
 
 import Badge from "../components/Badge";
@@ -58,6 +59,7 @@ function BadgeDetails(props) {
 
               <div>
                 <button className="btn btn-danger">Delete</button>
+                {/* {ReactDOM.createPortal(<h1>La concha de la madre</h1>, document.getElementById('modal'))} */}
               </div>
             </>
           </div>
