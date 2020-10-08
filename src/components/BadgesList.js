@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./styles/BadgesList.css";
 import Gravatar from "./Gravatar";
+
+import "./styles/BadgesList.css";
+import twlogo from '../images/Twitter_bird_logo_2012.png'
 
 class BadgesListItem extends React.Component {
   render() {
@@ -17,7 +19,7 @@ class BadgesListItem extends React.Component {
           <strong>
             {this.props.badge.firstName} {this.props.badge.lastName}
           </strong>
-          <br />@{this.props.badge.twitter}
+          <br /><img src={twlogo}/>{this.props.badge.twitter}
           <br />
           {this.props.badge.jobTitle}
         </div>
