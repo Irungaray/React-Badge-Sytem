@@ -19,7 +19,7 @@ class BadgesListItem extends React.Component {
           <strong>
             {this.props.badge.firstName} {this.props.badge.lastName}
           </strong>
-          <br /><img src={twlogo}/>{this.props.badge.twitter}
+          <br /><img src={twlogo} alt="tw"/>{this.props.badge.twitter}
           <br />
           {this.props.badge.jobTitle}
         </div>
