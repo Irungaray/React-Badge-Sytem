@@ -36,3 +36,5 @@ yarn start
 It will host the API and the Client simultaneously with the npm-run-all library, and when it's ready you will be prompted to a new tab in your favorite browser to check this App out.
 
 **Hope you enjoy!** 🍺 
+
+*Project of the ReactJS Platzi's course*
