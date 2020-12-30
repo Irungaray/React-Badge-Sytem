@@ -1,4 +1,4 @@
-# Badge-Sytem 🚀
+# Badge-Sytem React App 🚀
 CRUD of 'badges' with a local-hosted API, which acts as a DB.
 
 Actually it's a pretty simple App created for the mere purpouse of practicing. 
